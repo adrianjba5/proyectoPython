@@ -1,0 +1,16 @@
+{% extends "apppreentrega/base.html"%}
+{% load static %}
+{%block titulo%}
+    CLIENTES
+{% endblock%}
+{%block Cuerpo%}
+
+
+    <p>Estas seguro que deseas borrar este cliente: 
+        {{ cliente.nombre }}
+    </p>
+    <input type="submit" value="Eliminar">
+    <a href="{% url 'ListarClientes'%}"> Volver </a>
+
+
+{% endblock %}

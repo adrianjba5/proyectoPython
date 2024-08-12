@@ -1,0 +1,16 @@
+{% extends "apppreentrega/base.html"%}
+{% loadstatic %}
+{%block titulo%}
+    CLIENTES
+{% endblock%}
+{%block Cuerpo%}
+Craer Clientes
+<form action="/crear-cliente" method="POST">
+    {% csrf_token %}
+    <p>Nombre: <input type="text" name="nombre"></p>
+    <p>Apellido: <input type="text" name="apellido"></p>
+    <p>Correo: <input type="text" name="correo"></p>
+
+    <input type="submit" value="CREAR">
+</form>
+{%endblock%}

@@ -1,0 +1,22 @@
+{% extends "apppreentrega/base.html"%}
+{% load static %}
+{%block titulo%}
+    CLIENTES
+{% endblock%}
+{%block Cuerpo%}
+
+<form action="" method="POST">
+    {% csrf_token %}
+    <table>
+        {{form.as_table}}
+    </table>
+    <input type="submit" value="ACTUALIZAR">
+</form>
+
+{% for cliente in clientes %}
+<p>Cliente:
+    {{ cliente.nombre }} {{ cliente.apellido }}  {{ cliente.correo}}
+    <a href="{% url 'ActualizarClientes' cliente.pk %}"> Actualizar</a>
+</p>
+{% endfor %}
+{% endblock %}

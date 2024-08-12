@@ -1,0 +1,20 @@
+{% extends "apppreentrega/base.html"%}
+{% load static %}
+{%block titulo%}
+    CLIENTES
+{% endblock%}
+{%block Cuerpo%}
+    
+    {% for cliente in clientes %}
+    <p>Cliente:
+        {{ cliente.nombre }} {{ cliente.apellido }}  {{ cliente.correo}}
+        <a href="{% url 'ActualizarClientes' cliente.pk %}"> Actualizar </a>
+        <a href="{% url 'BorrarClientes' cliente.pk %}"> BORRAR </a>
+    </p>
+{% endfor %}
+{% endblock %}
+
+
+
+
+
