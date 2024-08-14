@@ -7,10 +7,10 @@ from apppreentrega import views
 
 urlpatterns = [
     path("", views.inicio, name="inicio"),
-    path("/listar/", views.CursoListView.as_view(), name="ListarClientes"),
-    path("/crear/", views.CursoCreateListView.as_view(), name="CrearClientes"),
-    path("/actualizar/<pk>/", views.CursoUpdateView.as_view(), name="ActualizarClientes"),
-    path("/borrar/<pk>/", views.CursoDeleteView.as_view(), name="BorrarClientes"),
+    path("listar/", views.ClienteListView.as_view(), name="ListarClientes"),
+    path("crear/", views.ClienteCreateListView.as_view(), name="CrearClientes"),
+    path("actualizar/<pk>/", views.ClienteUpdateView.as_view(), name="ActualizarClientes"),
+    path("borrar/<pk>/", views.ClienteDeleteView.as_view(), name="BorrarClientes"),
     
 
     

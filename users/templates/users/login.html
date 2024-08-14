@@ -1,9 +1,15 @@
+{% extends "apppreentrega/base.html"%}
 {% load static %}
+{% block titulo %}
+    CLIENTES
+{% endblock %}
+{% block Cuerpo %}
+
 
 <div class="d-flex justify-content-center">
 
     <div>
-        <p class="fs-5 fw-bold">{{msg_login}}</p>
+        <p class="fs-5 fw-bold">{{ msg_login }}</p>
 
         <form action="" method="POST"></form>
         {% csrf_token %}
@@ -13,3 +19,4 @@
     </div>
 
 </div>
+{% endblock%}
