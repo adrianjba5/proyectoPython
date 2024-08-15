@@ -35,10 +35,10 @@ def register(request):
         
         form = UserRegisterForm(request.POST)
         if form.is_valid():
-            
             form.save()
             return render(request,"apppreentrega/inicio.html")
-    
+    else:
+        form = UserRegisterForm()
         msg_register = "Error en los dastos ingresados"        
         
     form = UserRegisterForm()
